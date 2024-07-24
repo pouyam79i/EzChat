@@ -1,7 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div id="app"></div>
+  <div>
+    <button></button>
+  </div>
 </template>
 
 <style scoped></style>
