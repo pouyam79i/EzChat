@@ -1,13 +1,16 @@
-<script lang="ts">
-export default {
-  name: "side-bar-item",
-};
+<script setup lang="ts">
+import { SideBarItemInterface } from "../../sidebar_list";
+interface Props {
+  data: SideBarItemInterface;
+}
+const name = "side-bar-item";
+const props = defineProps<Props>();
 </script>
 
 <template>
   <div class="side-bar-item flex-row">
     <button class="flex-row ez-button">
-      <p>Item Title</p>
+      <p>{{ data.title }}</p>
       <div>
         <!-- <svg
           fill="var(--text-color)"

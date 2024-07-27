@@ -23,5 +23,6 @@ export default {
   overflow: hidden;
   border-radius: 30px;
   justify-content: center;
+  padding-left: 60px;
 }
 </style>

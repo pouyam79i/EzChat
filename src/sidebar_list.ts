@@ -1,4 +1,4 @@
-interface SidebarItem {
+export interface SideBarItemInterface {
   id: Number;
   title: String;
   description: String;
@@ -6,7 +6,7 @@ interface SidebarItem {
 }
 
 // Add your side bar items here (+ its page link)
-const SIDE_BAR_ITEMS: SidebarItem[] = [
+const SIDE_BAR_ITEMS: SideBarItemInterface[] = [
   {
     id: 0,
     title: "Chats",

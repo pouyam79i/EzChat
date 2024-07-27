@@ -1,15 +1,23 @@
 <script lang="ts">
 import SideBarItem from "./SideBarItem.vue";
+import SIDE_BAR_ITEMS, { SideBarItemInterface } from "../../sidebar_list";
+import { defineComponent } from "vue";
+import type { PropType } from "vue";
 
-export default {
+export default defineComponent({
   name: "side-bar-menu",
+  data: function () {
+    return {
+      items: SIDE_BAR_ITEMS
+    };
+  },
   components: { SideBarItem },
-};
+});
 </script>
 
 <template>
   <div class="side-bar-menu flex-col">
-    <SideBarItem />
+    <SideBarItem v-for="item in items" :data="item" />
   </div>
 </template>
 
