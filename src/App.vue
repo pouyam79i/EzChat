@@ -7,17 +7,14 @@ export default {
 </script>
 
 <template>
-  <div id="app">
+  <div id="app" class="flex-col">
     <EzChat></EzChat>
   </div>
 </template>
 
 <style scoped>
 #app {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
   height: 100vh;
   width: 100vw;
 }

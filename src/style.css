@@ -1,9 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 :root {
+  /* Colors */
   --base-bg-color: #0f0f0f;
   --bg-color: #232d3f;
-  --nav-bg-color-secondary: #005b41;
+  --bg-color-secondary: #005b41;
+  --bg-color-secondary-hover: #027e5b80;
   --nav-bg-color: #008170;
   --text-color: white;
+  /* Transitions */
+  --trans-fast: 300ms;
+  --trans-slow: 600ms;
+  --trans-mid: 450ms;
 }
 
 * {
@@ -11,10 +19,35 @@
   margin: 0;
   box-sizing: border-box;
   color: var(--text-color);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
   width: 100vw;
   height: 100vh;
   background-color: var(--base-bg-color);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ez-button {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+  border-radius: 4px;
+}
+
+.ez-button:hover {
+  background-color: var(--bg-color-secondary-hover);
 }
