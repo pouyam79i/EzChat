@@ -40,9 +40,10 @@ export default {
 
 <style scoped>
 .side-bar {
-  position: relative;
   z-index: 100;
+  position: relative;
   left: -230px;
+  top: 0px;
   background-color: var(--bg-color-secondary);
   width: 300px;
   height: 100%;
