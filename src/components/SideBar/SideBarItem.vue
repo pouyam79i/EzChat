@@ -1,15 +1,24 @@
 <script setup lang="ts">
 import { SideBarItemInterface } from "../../sidebar_list";
+import { useRouter } from "vue-router";
+
 interface Props {
   data: SideBarItemInterface;
 }
+const router = useRouter();
+
 const name = "side-bar-item";
 const props = defineProps<Props>();
+
+// TODO: fix pushing route
+const setRoute = (address: String) => {
+  router.push({ path: "/home" });
+};
 </script>
 
 <template>
   <div class="side-bar-item flex-row">
-    <button class="flex-row ez-button">
+    <button class="flex-row ez-button" @click="setRoute(data.path)">
       <p>{{ data.title }}</p>
       <div>
         <!-- <svg

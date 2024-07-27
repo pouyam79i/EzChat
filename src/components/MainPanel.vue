@@ -1,4 +1,6 @@
 <script lang="ts">
+import { RouterView } from "vue-router";
+
 export default {
   name: "main-panel",
 };
@@ -7,7 +9,7 @@ export default {
 <template>
   <div class="main-panel flex-col">
     <!-- <slot></slot> -->
-    this is main panel
+    <RouterView />
   </div>
 </template>
 

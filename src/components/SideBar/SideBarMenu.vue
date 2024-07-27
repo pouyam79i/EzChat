@@ -1,8 +1,7 @@
 <script lang="ts">
 import SideBarItem from "./SideBarItem.vue";
-import SIDE_BAR_ITEMS, { SideBarItemInterface } from "../../sidebar_list";
+import SIDE_BAR_ITEMS from "../../sidebar_list";
 import { defineComponent } from "vue";
-import type { PropType } from "vue";
 
 export default defineComponent({
   name: "side-bar-menu",
