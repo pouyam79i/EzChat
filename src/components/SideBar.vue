@@ -16,6 +16,11 @@ export default {
       };
     },
   },
+  methods: {
+    toggleSideBar: function () {
+      this.showSideBar = !this.showSideBar;
+    },
+  },
   components: {
     SideBarHeader,
     SideBarMenu,
@@ -25,7 +30,10 @@ export default {
 
 <template>
   <div class="side-bar flex-col" :style="displaySideBarStyle">
-    <SideBarHeader :is-side-bar-open="showSideBar" />
+    <SideBarHeader
+      :is-side-bar-open="showSideBar"
+      @toggleSideBar="toggleSideBar"
+    />
     <SideBarMenu />
   </div>
 </template>
@@ -33,9 +41,11 @@ export default {
 <style scoped>
 .side-bar {
   position: relative;
+  z-index: 100;
   left: -230px;
   background-color: var(--bg-color-secondary);
   width: 300px;
   height: 100%;
+  transition: left var(--trans-mid);
 }
 </style>

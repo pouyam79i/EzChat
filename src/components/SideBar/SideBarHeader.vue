@@ -10,13 +10,18 @@ export default {
       return title;
     },
   },
+  methods: {
+    toggleSideBar: function () {
+      this.$emit("toggleSideBar");
+    },
+  },
 };
 </script>
 
 <template>
   <div class="side-bar-header flex-row">
     <h1>EzChat</h1>
-    <button class="ez-button">{{ buttonText }}</button>
+    <button class="ez-button" @click="toggleSideBar">{{ buttonText }}</button>
   </div>
 </template>
 
